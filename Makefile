@@ -2,7 +2,7 @@ test: clean
 	go test -v ./... -cover
 
 deps:
-	go get -v -u github.com/mailgun/vulcand
+	go get -v -u github.com/robszumski/vulcand
 	go get -v -u github.com/codegangsta/cli
 	go get -v -u github.com/coreos/go-etcd/etcd
 	go get -v -u launchpad.net/gocheck
