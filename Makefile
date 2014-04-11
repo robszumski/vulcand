@@ -2,7 +2,8 @@ test: clean
 	go test -v ./... -cover
 
 deps:
-	go get -v -u github.com/mailgun/vulcan
+	go get -v -u github.com/mailgun/vulcand
+	go get -v -u github.com/codegangsta/cli
 	go get -v -u github.com/coreos/go-etcd/etcd
 	go get -v -u launchpad.net/gocheck
 
@@ -20,7 +21,7 @@ sloccount:
 	 find . -name "*.go" -print0 | xargs -0 wc -l
 
 install: clean
-	go install github.com/mailgun/vulcand
+	go install github.com/mailgun/vulcan
 	cd vulcanctl && $(MAKE) install && cd ..
 
 run: install
