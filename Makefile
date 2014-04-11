@@ -21,7 +21,7 @@ sloccount:
 	 find . -name "*.go" -print0 | xargs -0 wc -l
 
 install: clean
-	go install github.com/mailgun/vulcan
+	go install github.com/robszumski/vulcan
 	cd vulcanctl && $(MAKE) install && cd ..
 
 run: install
